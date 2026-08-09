@@ -1,4 +1,4 @@
-#(Hopefully) processing historical Sonde DO and Temp data
+#Processing historical Sonde DO and Temp data
 #Started 6.15.26 BVF
 #Most recent iteration 7.22.26 BVF
 
@@ -240,7 +240,7 @@ write.csv(year_C, 'OL2004b Yearly C Averages.csv', row.names = FALSE)           
 
 ### ### ### ### ### ### ### ### ### ### ### ###
 
-##### Attempting to run code for Dr. Dave's Original Data (SU2003) #####
+##### Run code for Dr. Dave's Original Data (SU2003) #####
 setwd('C:/Users/brynv/Documents/R/OWC data/6.15.26 Historical Data/SU2003')
 SU03path <- 'C:/Users/brynv/Documents/R/OWC data/6.15.26 Historical Data/SU2003'
 SU2003 <- import_local(SU03path, 'owcsuwq')
@@ -323,19 +323,19 @@ View(SU2003month)
 write.csv(SU2003month, 'Monthly Averages.csv', row.names=FALSE)
 
 #Visualize monthly trends
-fuckhistograms <- SU2003month %>%
+funhistograms <- SU2003month %>%
   group_by(month) %>%
   summarize(monthPR)
-View(fuckhistograms)
+View(funhistograms)
 
-SU2003PR <- ggplot(data = fuckhistograms, aes(x = month, y = monthPR)) + 
+SU2003PR <- ggplot(data = funhistograms, aes(x = month, y = monthPR)) + 
   geom_bar(stat = 'identity') + 
   ylim(0, 2) + 
   labs(x = 'Month',
        y = 'GPP/R (mg/L/day',
        title = 'GPP/R in 2003 for site SU')
 SU2003PR
-ggsave('fuckhistograms.png')
+ggsave('funhistograms.png')
 
 #Calculate yearly summary statistics
 SU2003year <- SU2003filter %>%

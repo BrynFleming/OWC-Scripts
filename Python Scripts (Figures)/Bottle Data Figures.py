@@ -1,4 +1,4 @@
-#Editable version of fuckery for generating bottle data figures
+#Editable version of fun for generating bottle data figures
 #Started 7/7/2026 BVF
 #Updated to include errobars and secondary PAR axis 7/10/2026 BVF
 #Updated to add PAR to legend, line at y=1, change y label and PAR unit 7/22 BVF
