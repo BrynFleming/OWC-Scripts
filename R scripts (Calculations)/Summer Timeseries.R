@@ -1,4 +1,4 @@
-#(Hopefully) processing historical Sonde DO and Temp data
+#Processing historical Sonde DO and Temp data
 #Started 6.15.26 BVF
 #Most recent iteration 7.22.26 BVF
 

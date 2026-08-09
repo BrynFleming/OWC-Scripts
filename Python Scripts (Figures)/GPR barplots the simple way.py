@@ -1,4 +1,4 @@
-#Python script for those damn barplots bc i gave up on loops sorry
+#Python script for those barplots bc i gave up on loops
 #started 7/13/2026 BVF
 
 import os
